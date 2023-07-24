@@ -1,0 +1,96 @@
+Q1 why dot(.) use with value type 
+	auto boxing and unboxing 
+	var a= new Number (10)
+
+Q2 what is null value and where se use it ? Hint:type of 
+	garbage collector when used null
+	
+Q3 typeof ?
+	
+	operator 
+	Flexibility ko allow karts hai 
+	return string 
+	
+Q4 Null vs Undefined 
+	reference kart data hai 
+	undefined mai when a value is declared but not   
+        defined 
+Q5 == vs ===
+	same type in (= = =) type conversion in ==
+	loose comparison 
+	strict comparison
+
+Q6 prime number compute function 
+
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+	
+
+Q7 ArmStrong number compute function 
+
+function as(a){
+    var len= a.toString().length;
+    var og=a;
+    console.log(len);
+    var s=0;
+    for (i=len;i>0;i--){
+        s=s+(a%10)**len;
+        a=a/10;
+        a=parseInt(a);
+    }
+    console.log(s);
+    if (s==og){
+	console.log('it is ArmStrong');
+    }
+    else{
+	console.log('it is not a ArmStrong');
+    }
+}
+
+
+Q8 add()
+	add(10)
+	add(10,20)
+	add (10,”ten”)
+
+Function add()
+Argument.length()
+
+->
+function add(){
+    var l= arguments.length;
+    var sum=0;
+    for(i=0;i<l;i++){
+        if (arguments[i]=='null'){
+            sum=sum+0;
+        }
+        else if (isNaN(arguments[i])==true ){
+            sum=sum+0;
+        }
+        else if (typeof(arguments[i])=='string'){
+            sum=sum+parseInt(arguments[i]);
+        }
+        else if (arguments[i] instanceof Array){
+            var arr=arguments[i];
+            for(i=0;i<arr.length;i++){
+                sum=sum+arr[i];
+            }
+        }
+        else{
+            sum=sum+arguments[i];
+        }
+    }
+    console.log(sum);
+}
+
+
