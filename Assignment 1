@@ -58,7 +58,8 @@ function as(a){
 }
 
 
-Q8 add()
+Q8 add() // PROBLEM IN ARRAY 
+
 	add(10)
 	add(10,20)
 	add (10,”ten”)
