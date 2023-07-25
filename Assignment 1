@@ -69,29 +69,27 @@ Argument.length()
 
 ->
 function add(){
-    var l= arguments.length;
+   function add(){
+function add(){
     var sum=0;
-    for(i=0;i<l;i++){
-        if (arguments[i]=='null'){
-            sum=sum+0;
-        }
-        else if (isNaN(arguments[i])==true ){
-            sum=sum+0;
-        }
-        else if (typeof(arguments[i])=='string'){
-            sum=sum+parseInt(arguments[i]);
-        }
-        else if (arguments[i] instanceof Array){
-            var arr=arguments[i];
-            for(i=0;i<arr.length;i++){
-                sum=sum+arr[i];
+    for(var i=0;i<arguments.length;i++){
+        if(arguments[i] instanceof Array==true){
+           for (var j=0; j<arguments[i].length;j++){
+               sum=sum+arguments[i][j];
             }
         }
         else{
-            sum=sum+arguments[i];
+            sum=sum+(isNaN(parseInt(arguments[i]))?0:arguments[i]);
+            
         }
+        
+ 
     }
+    
     console.log(sum);
 }
+
+
+
 ---------------------------
 
