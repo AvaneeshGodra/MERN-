@@ -1,0 +1,42 @@
+Q4 write a javascript program to display the current day and time in the following format :
+
+Output:
+Today is : Wednesday 
+Current time is : hr : min : sec
+
+var hr=d.getHours();
+var min=d.getMinutes();
+var sec = d.getSeconds();
+var da= d.getDay();
+console.log(`Today is : ${day[da]}
+Curent time is : ${hr} : ${min} : ${sec}`)
+
+
+Q3 rest vs spread 
+
+Rest :- ECMA 6 
+	function 
+	its an array ( arguments was a predicted array ) 	it can perform array operations 
+	
+	function x ( …arg){
+		
+
+	}
+	
+Spread :-
+
+	array and function mai use Hota hai 
+
+	var a=[1,2,3]
+	undefined
+	var b=[4,5,6]
+	undefined
+	var z=[a,b]
+	undefined
+	z
+	(2) [Array(3), Array(3)]
+	z=[...a,...b]
+	(6) [1, 2, 3, 4, 5, 6]
+
+
+	new memory 
