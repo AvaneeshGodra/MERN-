@@ -1,0 +1,66 @@
+4 types of function :-
+1. Normal [hoisting caN be done ]/ Name Function
+2. Anonymous function / function expression
+3. Name function expression 
+4. Arrow [pure functions ]
+	
+
+——————————————————————————
+
+-> NORMAL FUNCTION[ NAME FUNCTION]
+
+function rec(){
+    x=parseInt(prompt("enter length"));
+    y= parseInt(prompt("enter breadth"));
+    console.log("area is "+(x*y));
+    console.log("parameter is "+(2*(x+y)));
+}
+
+————————————————————————
+
+->ANONYMOUS FUNCTION
+
+function calc(){
+    var add=function(x,y){
+        return x+y
+    }
+    var sub= function(x,y){
+        return x-y;
+    }
+    return[add,sub];
+}
+OUTPUT CALL 
+
+calc()[0](1,2)
+3
+
+// ismai ek problem hai ki ham bhool jag ki kya 0 tha or kya 1 index pe tha to ovject ki tara pass karege 
+
+function calc(){
+    var add=function(x,y){
+        return x+y
+    }
+    var sub= function(x,y){
+        return x-y;
+    }
+    return{add,sub};
+}
+——————————————————————————————
+-> Name function expression
+
+function calc(){
+    var add=function add(x,y){
+        return x+y
+    }
+    var sub= function subtract (x,y){
+        return x-y;
+    }
+    return{add,sub};
+}
+
+
+// bas naam lik dia function expression mai 
+
+————————————————————————————
+->Arrow [pure functions ]
+
