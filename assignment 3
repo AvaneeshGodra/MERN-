@@ -64,3 +64,13 @@ function calc(){
 ————————————————————————————
 ->Arrow [pure functions ]
 
+const ad=(a,b)=>{
+    console.log("i am add function ");
+    return a+b;
+}
+
+OUTPUT :-
+
+ad(1,2)
+i am add function 
+3
