@@ -44,7 +44,7 @@ var y=ar.sort((a,b)=>a.name.localeCompare(b.name));
 5. In Employee Salaries add 10% Tax in Each Employee Salary and Store in a new Array, So don't modify the Orginal Array.
 Hint : filter, map
 
-MAP ( original effect nhi hoga )
+MAP 
 
 obj1={name:"avaneesh",salary:500000}
 obj2={name:"sam",salary:200000}
