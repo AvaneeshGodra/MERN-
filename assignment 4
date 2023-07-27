@@ -1,0 +1,61 @@
+1. Create an Array of Salaries, Now do the Sum of Salaries who is greater than 10000.
+Hint : reduce function
+
+const array1 = [10000, 20000, 30000, 40000];
+var a=array1.reduce((acc,curr)=>{
+    if(curr>10000){
+        acc=acc+curr;
+    }
+    else{
+        acc=acc+0;
+    }
+    return acc;
+},0);
+
+2. Get the Max Salary from the Array
+Hint : reduce function  const arr = [10000, 20000, 30000, 40000];
+var max=0;
+var b=arr.reduce((acc,curr)=>{
+    if (max<curr){
+        max=curr;
+    }
+    return max;
+});
+
+3. Count Those Salaries whose > 10000, note : don't use filter.
+Hint : reduce function  var a=[10000,20000,30000,40000];
+var c=a.reduce((acc,cur)=>cur>10000?acc=acc+1:acc+0,0);
+
+4. Maintain an Array of Employees. (Array of Objects), Now Sort the Employee by Name and Salary.  obj1={name:"avaneesh",salary:500000}
+obj2={name:"sam",salary:200000}
+obj3={name:"aayush",salary:600000}
+obj4={name:"goyal",salary:400000}
+var ar=[obj1,obj2,obj3,obj4];
+var y=ar.sort((a,b)=>a.salary-b.salary);
+—————————————————————
+obj1={name:"avaneesh",salary:500000}
+obj2={name:"sam",salary:200000}
+obj3={name:"aayush",salary:600000}
+obj4={name:"goyal",salary:400000}
+var ar=[obj1,obj2,obj3,obj4];
+var y=ar.sort((a,b)=>a.name.localeCompare(b.name));
+
+
+5. In Employee Salaries add 10% Tax in Each Employee Salary and Store in a new Array, So don't modify the Orginal Array.
+Hint : filter, map
+
+MAP ( original effect nhi hoga )
+
+obj1={name:"avaneesh",salary:500000}
+obj2={name:"sam",salary:200000}
+obj3={name:"aayush",salary:600000}
+obj4={name:"goyal",salary:400000}
+var ar=[obj1,obj2,obj3,obj4];
+var newa=ar.map(e=>e.salary*0.9);
+—————————————————————
+obj1={name:"avaneesh",salary:500000}
+obj2={name:"sam",salary:200000}
+obj3={name:"aayush",salary:600000}
+obj4={name:"goyal",salary:400000}
+var ar=[obj1,obj2,obj3,obj4];
+var newa =ar.filter(e=>e.salary=e.salary*0.9);
