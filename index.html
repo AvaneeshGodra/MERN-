@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shopping</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style sheet/main.css">
+    <script type="module" src="scripts/controllers/product-control.js"></script>
+</head>
+<body>
+    <header class="m-3">
+        <div class="logo" >
+            <img src="data:image/png;base64,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">
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="alert alert-info text-center">Pizza Shop</h1>
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card" >
+                            <img src="https://www.shutterstock.com/shutterstock/photos/1829205563/display_1500/stock-photo-fresh-homemade-italian-pizza-margherita-with-buffalo-mozzarella-and-basil-1829205563.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-dark">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" >
+                            <img src="https://www.shutterstock.com/shutterstock/photos/1829205563/display_1500/stock-photo-fresh-homemade-italian-pizza-margherita-with-buffalo-mozzarella-and-basil-1829205563.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-dark">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" >
+                            <img src="https://www.shutterstock.com/shutterstock/photos/1829205563/display_1500/stock-photo-fresh-homemade-italian-pizza-margherita-with-buffalo-mozzarella-and-basil-1829205563.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-dark">Go somewhere</a>
+                              
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" >
+                            <img src="https://www.shutterstock.com/shutterstock/photos/1829205563/display_1500/stock-photo-fresh-homemade-italian-pizza-margherita-with-buffalo-mozzarella-and-basil-1829205563.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-dark">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://www.shutterstock.com/shutterstock/photos/1829205563/display_1500/stock-photo-fresh-homemade-italian-pizza-margherita-with-buffalo-mozzarella-and-basil-1829205563.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-dark">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://www.shutterstock.com/shutterstock/photos/1829205563/display_1500/stock-photo-fresh-homemade-italian-pizza-margherita-with-buffalo-mozzarella-and-basil-1829205563.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-dark">Go somewhere</a>
+                              
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 border border-2">
+                <h3 class="text-center">TOTAL BILL</h3>
+                <div class="card">
+                    Pizza 1 
+                    Pizza 2
+                    Pizza 3
+                </div>
+                <div class="card mt-3">
+                    Total Pizza:
+                    <span>3</span>
+                    pizza amount:<span>120000</span>
+                </div>
+                <button class="btn btn-success w-100 mt-4" id="clickme">Pay Bill</button>
+        
+            </div>
+
+           
+        </div>
+    </div>
+</body>
+</html>
