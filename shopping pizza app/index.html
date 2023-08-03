@@ -16,26 +16,32 @@
         </div>
     </header>
     <div class="container">
-        <h1 class="alert alert-info text-center">Pizza Shop</h1>
+        <h1 class="text-center rounded shadow">Pizza Shop</h1>
         <div class="row">
-            <div class="col-8">
+            <div class="col-8 rounded" id="products">
                 <div class="row" id="loaddata">
+
+                <!-- yha pe banege dynamic cards-->
                     
                 </div>
             </div>
-            <div class="col-4 border border-2">
+            <div class="col-4 rounded" id="bill" >
                 <h3 class="text-center">TOTAL BILL</h3>
                 <div class="card">
-                    Pizza 1 
-                    Pizza 2
-                    Pizza 3
+                    <ul id="basket">
+                        <!--dynamic code -->
+                    </ul>
                 </div>
                 <div class="card mt-3">
                     Total Pizza:
-                    <span>3</span>
-                    pizza amount:<span>120000</span>
+                    <span id="noofpizza"></span>
+                    <hr>
+                    pizza amount:<span id="sum"></span>
+                    <hr>
+                    <h4>AFTER ADDING 18%GST :</h4>
+                    <span id="gst"></span>
                 </div>
-                <button class="btn btn-success w-100 mt-4" id="clickme">Pay Bill</button>
+                <button class="btn btn-success w-100 mt-4 shadow-lg rounded" id="clickme">Pay Bill</button>
         
             </div>
 

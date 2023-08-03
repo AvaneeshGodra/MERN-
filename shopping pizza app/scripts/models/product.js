@@ -9,6 +9,8 @@ class Product{
         this.desc = desc;
         this.price = price;
         this.url = url;
+        this.isaddedincard=false;
+        this.count=0;
     }
 }
 export default Product;

@@ -1,7 +1,23 @@
 .logo{
     height: 100px;
-
 }
 .logo img{
     height: 100%;
+}
+body{
+    background-color:#E3FDFD;
+}
+h1{
+    background-color: #71C9CE;
+}
+#bill{
+    background-color: #CBF1F5;
+}
+
+#clickme:hover{
+    color:greenyellow; 
+}
+.btn:hover{
+    border:2px solid black; 
+    box-shadow:  black;
 }

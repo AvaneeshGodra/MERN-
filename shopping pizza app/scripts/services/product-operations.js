@@ -1,15 +1,13 @@
 // Contains the Logic for Fetching ,
 // Adding, Sorting, Searching,
  // Deletion , Updation
- /*
-  It talk to Network Layer to Bring the JSON, and
-  convert JSON into Objects vice-versa
 
- */
 import Product from '../models/product.js';
 import makeNetworkCall from './api-client.js';
 
 const productOperations = {
+    products:[],
+    
     async loadProducts(){
         const pizzas = await makeNetworkCall();
         const pizzaArray = pizzas['Vegetarian'];
@@ -18,14 +16,26 @@ const productOperations = {
                  pizza.menu_description, pizza.price, pizza.assets.product_details_page[0].url);
                 return currentPizza;
                 })
-                console.log('Product Array ', productsArray);
+                this.products=productsArray;
                 return productsArray;  // Wrap in Promise
             },
-    sortProducts(){
-
+    searchProducts(pizzaID){
+        const product = this.products.find(currentproduct=>currentproduct.id==pizzaID);
+        product.count++;
+        if(product.count%2==0){
+            product.isaddedincard=false;
+            
+        }
+        else{
+            product.isaddedincard=true;
+        }
+        return product;
+        
     },
-    searchProducts(){
-
+    finacart(){
+        const finalproducts=this.products.filter(product=>product.isaddedincard);
+        return finalproducts;
     }
+
 }
 export default productOperations;
